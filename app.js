@@ -106,7 +106,13 @@ function searchProducts() {
     return String(item.IDPRODUTO) === raw;
   });
 
-  render(results);
+  const sorted = results.sort((a, b) => {
+    const aHas = Number(a.QTDATUALESTOQUE) > 0 ? 1 : 0;
+    const bHas = Number(b.QTDATUALESTOQUE) > 0 ? 1 : 0;
+    return bHas - aHas;
+  });
+
+  render(sorted);
 }
 
 function render(items) {
