@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Consulta de Produtos</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span>Produtos atualizados em:</span>
+      <strong id="updatedAt">Carregando...</strong>
+    </nav>
+
+    <main class="container">
+      <section class="hero">
+        <img class="logo" src="./logo.png" alt="Logo" />
+        <div class="search-bar">
+          <input id="search" type="text" placeholder="Digite o código ou descrição" />
+          <button id="searchBtn" type="button">Pesquisar</button>
+          <button id="clearBtn" class="secondary" type="button">Limpar</button>
+        </div>
+      </section>
+
+      <section id="results" class="results"></section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
